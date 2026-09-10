@@ -29,6 +29,31 @@ https://mcp.lemon.io/mcp
 
 That's it — Lemon.io tools are now available in your conversations.
 
+### Cline
+
+Open **MCP Servers → Configure MCP Servers** and add the server to `cline_mcp_settings.json`:
+
+```json
+{
+  "mcpServers": {
+    "lemon-io": {
+      "type": "streamableHttp",
+      "url": "https://mcp.lemon.io/mcp",
+      "disabled": false,
+      "autoApprove": []
+    }
+  }
+}
+```
+
+### Cursor
+
+Install from the [Cursor Directory listing](https://cursor.directory/plugins/lemonio-mcp), or add the same block to `~/.cursor/mcp.json`.
+
+### Other MCP clients
+
+Any client that speaks streamable HTTP can connect to `https://mcp.lemon.io/mcp`. No API key, token, or environment variable is required — the server is public and read-only apart from `submit_form`, which only sends a hiring request after you confirm it.
+
 ## Example prompts
 
 - *"Help me hire a senior React developer for a fintech project."*
