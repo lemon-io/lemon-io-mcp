@@ -37,7 +37,11 @@ That's it — Lemon.io tools are now available in your conversations.
 4. Set **Transport Type** to **Streamable HTTP**.
 5. Click **Add Server**.
 
-Add it through this panel rather than by editing `cline_mcp_settings.json` directly. The location of that file differs between Cline versions and IDEs, and an upgraded install can leave a stale copy behind that Cline no longer reads — writing to it looks successful but the server never appears. If you do configure it by hand, the entry is:
+Add it through this panel rather than by editing `cline_mcp_settings.json` directly — and do not locate that file by searching the filesystem for its name.
+
+Cline creates **two** files with that name and reads only one of them. On VS Code the decoy sits in the extension's storage directory (`.../User/globalStorage/saoudrizwan.claude-dev/settings/`) and is never read; Cline 4.x reads its own data directory instead (`~/.cline/data/settings/cline_mcp_settings.json` on macOS). Writing to the decoy looks completely successful — valid JSON, no error, the endpoint probes fine — but the server never appears in the panel. The **Remote Servers** tab always writes to the file that install actually uses.
+
+If you do configure it by hand, the entry is:
 
 ```json
 {
