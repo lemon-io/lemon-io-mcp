@@ -31,7 +31,13 @@ That's it — Lemon.io tools are now available in your conversations.
 
 ### Cline
 
-Open **MCP Servers → Configure MCP Servers** and add the server to `cline_mcp_settings.json`:
+1. In the Cline panel, click the **MCP Servers** icon.
+2. Open the **Remote Servers** tab.
+3. Set **Server Name** to `lemon-io` and **Server URL** to `https://mcp.lemon.io/mcp`.
+4. Set **Transport Type** to **Streamable HTTP**.
+5. Click **Add Server**.
+
+Add it through this panel rather than by editing `cline_mcp_settings.json` directly. The location of that file differs between Cline versions and IDEs, and an upgraded install can leave a stale copy behind that Cline no longer reads — writing to it looks successful but the server never appears. If you do configure it by hand, the entry is:
 
 ```json
 {
@@ -45,6 +51,8 @@ Open **MCP Servers → Configure MCP Servers** and add the server to `cline_mcp_
   }
 }
 ```
+
+`"type": "streamableHttp"` is required — omitting it makes Cline fall back to the legacy SSE transport, which this server does not serve.
 
 ### Cursor
 
