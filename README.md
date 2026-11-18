@@ -13,6 +13,16 @@ No account, API key, or local setup required — it's a hosted server you connec
 - **Write a job description** — generate a professional, role-specific JD from your requirements.
 - **Prepare interviews** — get curated technical interview questions by stack and seniority.
 
+## Try it in one line
+
+Not connected yet? Paste this into Claude or ChatGPT:
+
+```
+Read https://mcp.lemon.io/start and help me hire a developer through Lemon.io
+```
+
+The assistant reads [mcp.lemon.io/start](https://mcp.lemon.io/start), explains what Lemon.io can do, helps you plan the role and draft a job description or interview questions, and walks you through connecting the server. Browsing real developers and sending a request from the chat need the connected server (below). Your assistant needs web access to open the link.
+
 ## Connect
 
 The server URL is:
@@ -29,6 +39,14 @@ https://mcp.lemon.io/mcp
 4. Click **Connect**.
 
 That's it — Lemon.io tools are now available in your conversations.
+
+### ChatGPT
+
+1. Open **Settings → Apps & Connectors → Advanced settings** and turn on **Developer mode**.
+2. Click **Create**, name it `Lemon.io`, paste the server URL above and choose **No authentication**.
+3. In a new chat, enable `Lemon.io` from the tools menu.
+
+Developer mode availability depends on your ChatGPT plan.
 
 ### Cline
 
